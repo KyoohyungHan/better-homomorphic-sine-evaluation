@@ -13,6 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstdlib>
 
 #include <NTL/ZZ.h>
 #include <NTL/RR.h>
@@ -409,6 +410,7 @@ int main(int argc, char* argv[]) {
 //--Print Algorithm Coefficients in File------------------
 //--------------------------------------------------------
 
+	system("mkdir -p ./result/coef");
 	string path_coef = "./result/coef/Deg";
 	path_coef += (to_string(tot_deg-1) 
 			+ "Err" + to_string(dev) 
@@ -431,6 +433,7 @@ int main(int argc, char* argv[]) {
 //--File Path Setting-------------------------------------
 //--------------------------------------------------------
 
+	system("mkdir -p ./result/error");
 	string path_err = "./result/error/Deg";
 	path_err += (to_string(tot_deg-1) 
 			+ "Err" + to_string(dev) 
